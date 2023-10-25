@@ -29,5 +29,4 @@ func main()  {
 	z01.PrintRune('x')
 	z01.PrintRune('y')
 	z01.PrintRune('z')
-	z01.PrintRune('\n')	
 }
