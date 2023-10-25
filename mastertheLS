@@ -1,1 +1,1 @@
-ls -p -A -1 -t --time=atime | tr '\n' ','
+ls -p -A -m -t --time=atime
