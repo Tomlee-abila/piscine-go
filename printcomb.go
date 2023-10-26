@@ -3,18 +3,19 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintComb() {
-	z01.Printf("012")
+    for i := 0; i < 8; i++ {
+        for j := i + 1; j < 9; j++ {
+            for k := j + 1; k < 10; k++ {
+                z01.PrintRune(rune('0' + i))
+                z01.PrintRune(rune('0' + j))
+                z01.PrintRune(rune('0' + k))
 
-	for i := 13; i <= 999; i++ {
-
-		firstDigit := i / 100
-		secondDigit := (i / 10) % 10
-		thirdDigit := i % 10
-
-		if firstDigit < secondDigit && secondDigit < thirdDigit {
-
-			z01.Printf(", %03d", i)
-		}
-
-	}
+                if i != 7 || j != 8 || k != 9 {
+                    z01.PrintRune(',')
+                    z01.PrintRune(' ')
+                }
+            }
+        }
+    }
 }
+
