@@ -7,5 +7,4 @@ func BasicAtoi(s string) int {
 		result = result*10 + digit
 	}
 	return result
-
 }
