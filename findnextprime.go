@@ -13,7 +13,7 @@ func FindNextPrime(nb int) int {
 
 func Prime(nb int) bool {
 	if nb < 2 {
-		return true
+		return false
 	}
 	if nb == 2 || nb == 3 || nb == 5 || nb == 7 || nb == 11 {
 		return true
