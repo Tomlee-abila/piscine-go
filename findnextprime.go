@@ -1,4 +1,16 @@
-package piscine
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println(FindNextPrime(5))
+	fmt.Println(FindNextPrime(4))
+	fmt.Println(Prime(10011))
+}
+
+// package piscine
 
 func FindNextPrime(nb int) int {
 	result := 0
