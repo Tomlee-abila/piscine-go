@@ -22,7 +22,6 @@ func Prime(nb int) bool {
 		return false
 	}
 	for i := 13; i <= nb; i += 2 {
-
 		if nb%i == 0 {
 			return false
 		}
