@@ -8,6 +8,7 @@ func FindNextPrime(nb int) int {
 	}
 	return 1
 }
+
 func IsPrime(nb int) bool {
 	if nb == 1 || nb < 0 || nb == 0 {
 		return false
