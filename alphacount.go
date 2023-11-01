@@ -9,6 +9,7 @@ func AlphaCount(str string) int {
 	}
 	return count
 }
+
 func alphabet(alpha rune) bool {
 	for a := 'a'; a <= 'z'; a++ {
 		if alpha == a {
