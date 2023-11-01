@@ -6,7 +6,7 @@ func FindNextPrime(nb int) int {
 	}
 	for i := nb; ; i++ {
 		prime := true
-		for i := 2; j*j <= i; j++ {
+		for j := 2; j*j <= i; j++ {
 			if i%j == 0 {
 				prime = false
 				break
