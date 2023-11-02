@@ -1,6 +1,6 @@
 package piscine
 
-func IsLower(s string) string {
+func ToLower(s string) string {
 	runeS := []rune(s)
 	for i, str := range s {
 		if upper(str) {
