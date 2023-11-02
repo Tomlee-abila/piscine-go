@@ -4,8 +4,8 @@ func TrimAtoi(s string) int {
 	runeString := []rune(s)
 	var Array []int
 	number := 0
-	minusDigit := 0
-	firstDigit := -1
+	minusDigit := -1
+	firstDigit := -2
 	count := 0
 
 	for i, str := range runeString {
@@ -25,7 +25,7 @@ func TrimAtoi(s string) int {
 	for i := 0; i < count; i++ {
 		number = (number * 10) + Array[i]
 	}
-	if firstDigit > minusDigit {
+	if firstDigit > minusDigit && minusDigit != -1 {
 		number *= -1
 	}
 	return number
