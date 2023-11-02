@@ -1,6 +1,6 @@
 package piscine
 
-import "fmt"
+import "github.com/01-edu/z01.PrintRune"
 
 func PrintNbrInOrder(n int) {
 	count := 0
@@ -8,10 +8,10 @@ func PrintNbrInOrder(n int) {
 	fNumber := 0
 	temp1 := 0
 	if n < 10 && n >= 0 {
-		fmt.Print(n)
+		z01.PrintRune(rune(n))
 		return
 	} else if n < 0 {
-		fmt.Print("0")
+		z01.PrintRune('0')
 		return
 	}
 	for i := 0; temp > 0; i++ {
@@ -36,5 +36,8 @@ func PrintNbrInOrder(n int) {
 	for i := 0; i < count; i++ {
 		fNumber = (fNumber * 10) + number[i]
 	}
-	fmt.Print(fNumber)
+	runeNumber := []rune(fNumber)
+	for i := 0; i < count; i++ {
+		z01.PrintRune(runeNumber[i])
+	}
 }
