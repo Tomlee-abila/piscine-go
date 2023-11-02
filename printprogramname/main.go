@@ -1,9 +1,7 @@
 package main
 
-import (
-	"github.com/01-edu/z01"
-	"os"
-)
+import "github.com/01-edu/z01"
+import "os"
 
 func main() {
 	title := []rune(os.Args[0])
