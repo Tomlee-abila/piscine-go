@@ -1,5 +1,7 @@
 package piscine
 
+import "fmt"
+
 func PrintNbrInOrder(n int) {
 	count := 0
 	temp := n
