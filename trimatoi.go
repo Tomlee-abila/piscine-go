@@ -33,12 +33,3 @@ func TrimAtoi(s string) int {
 	}
 	return number
 }
-
-func numeric(alpha rune) bool {
-	for a := '0'; a <= '9'; a++ {
-		if alpha == a {
-			return true
-		}
-	}
-	return false
-}
