@@ -1,12 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
-
-func main() {
-	fmt.Println(ToUpper("Hello! How are you?"))
-}
+package piscine
 
 func ToUpper(s string) string {
 	runeS := []rune(s)
@@ -16,13 +8,4 @@ func ToUpper(s string) string {
 		}
 	}
 	return string(runeS)
-}
-
-func lower(alpha rune) bool {
-	for a := 'a'; a <= 'z'; a++ {
-		if alpha == a {
-			return true
-		}
-	}
-	return false
 }
