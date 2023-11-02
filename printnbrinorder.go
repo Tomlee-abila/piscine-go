@@ -1,43 +1,38 @@
 package piscine
 
-import "github.com/01-edu/z01.PrintRune"
+import "github.com/01-edu/z01"
 
 func PrintNbrInOrder(n int) {
-	count := 0
-	temp := n
-	fNumber := 0
-	temp1 := 0
-	if n < 10 && n >= 0 {
-		z01.PrintRune(rune(n))
-		return
-	} else if n < 0 {
+	if n == 0 {
 		z01.PrintRune('0')
 		return
 	}
-	for i := 0; temp > 0; i++ {
-		temp /= 10
-		count++
-	}
-	number := make([]int, count)
-	temp = n
-	for i := 0; temp > 0; i++ {
-		number[i] = temp % 10
-		temp /= 10
-	}
-	for j := 0; j < count; j++ {
-		for i := 0; i < count-1; i++ {
-			if number[i] > number[i+1] {
-				temp1 = number[i]
-				number[i] = number[i+1]
-				number[i+1] = temp1
+	if n > 0 {
+		var array []int
+		eachValue := 0
+
+		arrayCount := 0
+		var minValue int
+		for n != 0 {
+			eachValue = n % 10
+			n /= 10
+			array = append(array, eachValue)
+		}
+
+		for count := range array {
+			arrayCount = count + 1
+		}
+		for i := 0; i < arrayCount-1; i++ {
+			for j := 0; j < arrayCount-i-1; j++ {
+				if array[j] > array[j+1] {
+					minValue = array[j]
+					array[j] = array[j+1]
+					array[j+1] = minValue
+				}
 			}
 		}
-	}
-	for i := 0; i < count; i++ {
-		fNumber = (fNumber * 10) + number[i]
-	}
-	runeNumber := []rune(fNumber)
-	for i := 0; i < count; i++ {
-		z01.PrintRune(runeNumber[i])
+		for i := 0; i < arrayCount; i++ {
+			z01.PrintRune(rune(array[i] + 48))
+		}
 	}
 }
