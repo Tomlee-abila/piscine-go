@@ -21,9 +21,6 @@ func TrimAtoi(s string) int {
 			Array = append(Array, int(str-'0'))
 		}
 	}
-	if minusDigit-firstDigit == -1 {
-		minusDigit = firstDigit
-	}
 
 	for i := 0; i < count; i++ {
 		number = (number * 10) + Array[i]
