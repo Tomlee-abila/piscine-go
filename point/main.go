@@ -16,16 +16,9 @@ func printStr(s string) {
 }
 
 func printInt(i int) {
-	x1 := '7'
-	x2 := '7'
-	y2 := '6'
 	r := '0'
-	if i == 4 {
-		r = x1 - '3'
-	} else if i == 2 {
-		r = x2 - '5'
-	} else {
-		r = y2 - '5'
+	for j:=0; j < i; j++{
+		r++
 	}
 	z01.PrintRune(r)
 }
