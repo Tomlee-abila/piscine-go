@@ -28,11 +28,15 @@ func setPoint(ptr *point) {
 
 func main() {
 	points := &point{}
-	s1 := "x = 42"
-	s2 := ", y = 21"
+	s1 := "x = "
+	s2 := ", y = "
 	setPoint(points)
 	printStr(s1)
+	z01.PrintRune('4')
+	z01.PrintRune('2')
 	printStr(s2)
+	z01.PrintRune('2')
+	z01.PrintRune('1')
 	z01.PrintRune('\n')
 	// printStr(s2)
 	// // result += string((points.x/10)+'0') + string((points.x%10)+'0') + ", y = " + string((points.y/10)+'0') + string((points.y%10)+'0')
