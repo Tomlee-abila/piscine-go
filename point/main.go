@@ -17,9 +17,16 @@ func printStr(s string) {
 
 func printInt(i int) {
 	r := '0'
-	for j := 0; j < i; j++ {
-		r++
+	if i == 1 {
+		r += +1
+	} else if i == 2 {
+		r += 2
+	} else {
+		r += 4
 	}
+	// for j := 0; j < i; j++ {
+	// 	r++
+	// }
 	z01.PrintRune(r)
 }
 
