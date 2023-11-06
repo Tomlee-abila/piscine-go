@@ -19,7 +19,7 @@ func printInt(i int) {
 	x1 := '4'
 	x2 := '2'
 	y2 := '1'
-	var r rune
+	r := '0'
 	if i == 4 {
 		r = x1
 	} else if i == 2 {
