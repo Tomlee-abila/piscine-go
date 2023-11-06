@@ -15,11 +15,20 @@ func printStr(s string) {
 	}
 }
 
-// func printInt(i int) {
-// 	for _, r := range s {
-// 		z01.PrintRune(r)
-// 	}
-// }
+func printInt(i int) {
+	x1 := '4'
+	x2 := '2'
+	y2 := '1'
+	var r rune
+	if i == 4 {
+		r = x1
+	} else if i == 2 {
+		r = x2
+	} else {
+		r = y2
+	}
+	z01.PrintRune(r)
+}
 
 func setPoint(ptr *point) {
 	ptr.x = 42
@@ -32,29 +41,10 @@ func main() {
 	s2 := ", y = "
 	setPoint(points)
 	printStr(s1)
-	z01.PrintRune('4')
-	z01.PrintRune('2')
+	printInt((points.x / 10))
+	printInt((points.x % 10))
 	printStr(s2)
-	z01.PrintRune('2')
-	z01.PrintRune('1')
+	printInt((points.y / 10))
+	printInt((points.y % 10))
 	z01.PrintRune('\n')
-	// printStr(s2)
-	// // result += string((points.x/10)+'0') + string((points.x%10)+'0') + ", y = " + string((points.y/10)+'0') + string((points.y%10)+'0')
-	// // printStr(result)
-	// z01.PrintRune('x')
-	// z01.PrintRune(' ')
-	// z01.PrintRune('=')
-	// z01.PrintRune(' ')
-	// fmt.Print(((points.x / 10) + '0'))
-	// z01.PrintRune(rune((points.x % 10) + '0'))
-	// z01.PrintRune(',')
-	// z01.PrintRune(' ')
-	// z01.PrintRune('y')
-	// z01.PrintRune(' ')
-	// z01.PrintRune('=')
-	// z01.PrintRune(' ')
-	// z01.PrintRune(rune((points.x / 10) + '0'))
-	// z01.PrintRune(rune((points.x % 10) + '0'))
-	// z01.PrintRune('\n')
-	// fmt.Printf("x = %d, y = %d\n", points.x, points.y)
 }
