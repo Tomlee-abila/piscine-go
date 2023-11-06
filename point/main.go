@@ -17,7 +17,7 @@ func printStr(s string) {
 
 func printInt(i int) {
 	r := '0'
-	for j:=0; j < i; j++{
+	for j := 0; j < i; j++ {
 		r++
 	}
 	z01.PrintRune(r)
