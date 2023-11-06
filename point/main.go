@@ -16,16 +16,16 @@ func printStr(s string) {
 }
 
 func printInt(i int) {
-	x1 := '4'
-	x2 := '2'
-	y2 := '1'
+	x1 := '7'
+	x2 := '7'
+	y2 := '6'
 	r := '0'
 	if i == 4 {
-		r = x1
+		r = x1 - '3'
 	} else if i == 2 {
-		r = x2
+		r = x2 - '5'
 	} else {
-		r = y2
+		r = y2 - '5'
 	}
 	z01.PrintRune(r)
 }
@@ -47,4 +47,5 @@ func main() {
 	printInt((points.y / 10))
 	printInt((points.y % 10))
 	z01.PrintRune('\n')
+	// vziPusU.m#cc4Bi
 }
