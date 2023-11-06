@@ -9,13 +9,6 @@ type point struct {
 	y int
 }
 
-func printStr(s string) {
-	for _, r := range s {
-		z01.PrintRune(r)
-	}
-	z01.PrintRune('\n')
-}
-
 func setPoint(ptr *point) {
 	ptr.x = 42
 	ptr.y = 21
@@ -23,9 +16,24 @@ func setPoint(ptr *point) {
 
 func main() {
 	points := &point{}
-	result := "x = "
+	// result := "x = "
 	setPoint(points)
-	result += string((points.x/10)+'0') + string((points.x%10)+'0') + ", y = " + string((points.y/10)+'0') + string((points.y%10)+'0')
-	printStr(result)
+	// result += string((points.x/10)+'0') + string((points.x%10)+'0') + ", y = " + string((points.y/10)+'0') + string((points.y%10)+'0')
+	// printStr(result)
+	z01.PrintRune('x')
+	z01.PrintRune(' ')
+	z01.PrintRune('=')
+	z01.PrintRune(' ')
+	z01.PrintRune(rune((points.x / 10) + '0'))
+	z01.PrintRune(rune((points.x % 10) + '0'))
+	z01.PrintRune(',')
+	z01.PrintRune(' ')
+	z01.PrintRune('y')
+	z01.PrintRune(' ')
+	z01.PrintRune('=')
+	z01.PrintRune(' ')
+	z01.PrintRune(rune((points.x / 10) + '0'))
+	z01.PrintRune(rune((points.x % 10) + '0'))
+	z01.PrintRune('\n')
 	// fmt.Printf("x = %d, y = %d\n", points.x, points.y)
 }
