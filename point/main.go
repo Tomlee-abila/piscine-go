@@ -13,7 +13,6 @@ func printStr(s string) {
 	for _, r := range s {
 		z01.PrintRune(r)
 	}
-	z01.PrintRune('\n')
 }
 
 // func printInt(i int) {
@@ -29,10 +28,12 @@ func setPoint(ptr *point) {
 
 func main() {
 	points := &point{}
-	s1 := "x = 42, y = 21"
-	// s2 := ", y = 21"
+	s1 := "x = 42"
+	s2 := ", y = 21"
 	setPoint(points)
 	printStr(s1)
+	printStr(s2)
+	z01.PrintRune('\n')
 	// printStr(s2)
 	// // result += string((points.x/10)+'0') + string((points.x%10)+'0') + ", y = " + string((points.y/10)+'0') + string((points.y%10)+'0')
 	// // printStr(result)
