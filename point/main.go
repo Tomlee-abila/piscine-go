@@ -28,6 +28,7 @@ func main() {
 	z01.PrintRune('\n')
 	// vziPusU.m#cc4Bi
 }
+
 func printStr(s string) {
 	for _, r := range s {
 		z01.PrintRune(r)
