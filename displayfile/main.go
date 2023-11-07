@@ -1,9 +1,10 @@
 package main
 
 import (
+	"os"
+
 	"fmt"
 	"io/ioutil"
-	"os"
 )
 
 func main() {
@@ -14,16 +15,13 @@ func main() {
 		fmt.Println("File name missing")
 		return
 	}
-
 	filename := os.Args[1]
-
 	// Read the content of the file
 	content, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Println("Error reading file:", err)
 		return
 	}
-
 	// Print the content of the file as a string
 	fmt.Print(string(content))
 
