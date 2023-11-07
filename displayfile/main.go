@@ -23,5 +23,4 @@ func main() {
 	}
 	// Print the content of the file as a string
 	fmt.Print(string(content))
-
 }
