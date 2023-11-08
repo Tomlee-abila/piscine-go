@@ -1,10 +1,11 @@
 package piscine
 
 func CountIf(f func(string) bool, tab []string) int {
-	for i, num := range tab {
+	count := 0
+	for _, num := range tab {
 		if f(num) {
-			return i + 1
+			count++
 		}
 	}
-	return 0
+	return count
 }
