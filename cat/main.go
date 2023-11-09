@@ -15,6 +15,8 @@ func main() {
 			}
 		}
 		return
+	} else {
+		readStdin()
 	}
 }
 
@@ -31,6 +33,16 @@ func openFile(fName string) bool {
 	return true
 }
 
+func readStdin() {
+	content, err := ioutil.ReadAll(os.Stdin)
+	if err != nil {
+		PrintStr(err.Error())
+		z01.PrintRune('\n')
+		return
+	}
+	PrintStr(string(content))
+}
+
 func readFile(filename string) {
 	content, err := ioutil.ReadFile(filename)
 	if err != nil {
@@ -39,15 +51,6 @@ func readFile(filename string) {
 		return
 	}
 	PrintStr(string(content))
-	// filename := os.Args[1]
-	// // Read the content of the file
-	// content, err := ioutil.ReadFile(filename)
-	// if err != nil {
-	// 	fmt.Println("Error reading file:", err)
-	// 	return
-	// }
-	// // Print the content of the file as a string
-	// fmt.Print(string(content))
 }
 
 func PrintStr(s string) {
