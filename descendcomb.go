@@ -1,12 +1,6 @@
-package main
+package piscine
 
 import "github.com/01-edu/z01"
-
-func main() {
-	DescendComb()
-}
-
-// package piscine
 
 func DescendComb() {
 	for i := '9'; i >= '0'; i-- {
