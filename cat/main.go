@@ -15,7 +15,7 @@ func main() {
 			}
 		}
 		return
-	} 
+	}
 }
 
 func openFile(fName string) bool {
