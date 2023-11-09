@@ -15,12 +15,13 @@ func main() {
 			}
 		}
 		return
-	} else if len(os.Args) < 2 {
-		for i := 0; i < 10; i++ {
-			PrintStr("Hello")
-			z01.PrintRune('\n')
-		}
-	}
+	} 
+	// else if len(os.Args) < 2 {
+	// 	for i := 0; i < 10; i++ {
+	// 		PrintStr("Hello")
+	// 		z01.PrintRune('\n')
+	// 	}
+	// }
 }
 
 func openFile(fName string) bool {
