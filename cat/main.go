@@ -30,7 +30,7 @@ func openFile(fName string) bool {
 		PrintStr("ERROR: ")
 		PrintStr(err.Error())
 		z01.PrintRune('\n')
-		PrintStr("exit status 1")
+		os.Exit(1)
 		return false
 	}
 	defer file.Close()
