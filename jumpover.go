@@ -7,5 +7,6 @@ func JumpOver(str string) string {
 			result += string(ch)
 		}
 	}
+	result += "\n"
 	return result
 }
