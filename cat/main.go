@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"github.com/01-edu/z01"
 	"io/ioutil"
 	"os"
 )
@@ -16,7 +16,8 @@ func main() {
 		return
 	} else if len(os.Args) < 2 {
 		for i := 0; i < 10; i++ {
-			fmt.Println("Hello")
+			PrintStr("Hello")
+			z01.PrintRune('\n')
 			i = 0
 		}
 	}
@@ -25,7 +26,9 @@ func main() {
 func openFile(fName string) bool {
 	file, err := os.Open(fName)
 	if err != nil {
-		fmt.Println("ERROR:", err.Error())
+		PrintStr("ERROR: ")
+		PrintStr(err.Error())
+		z01.PrintRune('\n')
 		return false
 	}
 	defer file.Close()
@@ -35,10 +38,11 @@ func openFile(fName string) bool {
 func readFile(filename string) {
 	content, err := ioutil.ReadFile(filename)
 	if err != nil {
-		fmt.Println(err.Error())
+		PrintStr(err.Error())
+		z01.PrintRune('\n')
 		return
 	}
-	fmt.Print(string(content))
+	PrintStr(string(content))
 	// filename := os.Args[1]
 	// // Read the content of the file
 	// content, err := ioutil.ReadFile(filename)
@@ -48,4 +52,10 @@ func readFile(filename string) {
 	// }
 	// // Print the content of the file as a string
 	// fmt.Print(string(content))
+}
+func PrintStr(s string) {
+	for _, i := range s {
+		z01.PrintRune(i)
+	}
+	// z01.PrintRune('\n')
 }
