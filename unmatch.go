@@ -14,9 +14,9 @@ func Unmatch(a []int) int {
 					Double = true
 				}
 			}
-			if count == len(a) && Double == false {
-				result = m
-			}
+		}
+		if count == len(a) && Double == false {
+			result = n
 		}
 	}
 	return result
