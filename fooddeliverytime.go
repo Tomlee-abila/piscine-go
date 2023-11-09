@@ -1,4 +1,17 @@
-package piscine
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println(FoodDeliveryTime("burger"))
+	fmt.Println(FoodDeliveryTime("chips"))
+	fmt.Println(FoodDeliveryTime("nuggets"))
+	fmt.Println(FoodDeliveryTime("burger") + FoodDeliveryTime("chips") + FoodDeliveryTime("nuggets"))
+}
+
+// package piscine
 
 type food struct {
 	burger  int
@@ -17,7 +30,7 @@ func FoodDeliveryTime(order string) int {
 	setPoint(preptime)
 	runeOrder := []rune(order)
 	totalTime := 0
-	ch := 0
+	c := 0
 	br := 0
 	nu := 0
 
@@ -36,7 +49,7 @@ func FoodDeliveryTime(order string) int {
 					return 404
 				}
 			}
-			ch++
+			c++
 			totalTime += preptime.chips
 		} else if ch == 'n' {
 			for j, rn := range "nuggets" {
@@ -48,7 +61,7 @@ func FoodDeliveryTime(order string) int {
 			totalTime += preptime.nuggets
 		}
 	}
-	if (ch*len("chips"))+(br*len("burger"))+(nu*len("nuggets")) != len(runeOrder) {
+	if (c*len("chips"))+(br*len("burger"))+(nu*len("nuggets")) != len(runeOrder) {
 		return 404
 	}
 	return totalTime
