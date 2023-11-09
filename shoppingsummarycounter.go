@@ -1,6 +1,6 @@
 package piscine
 
-func splitWords(s string) []string {
+func ShoppingSummaryCounter(s string) []string {
 	word := ""
 	var result []string
 	firstWord := true
