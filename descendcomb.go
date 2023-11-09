@@ -13,11 +13,15 @@ func DescendComb() {
 						z01.PrintRune(' ')
 						z01.PrintRune(k)
 						z01.PrintRune(l)
-						z01.PrintRune(',')
+						if (i == '0') && (j == '1') && (k == '0') && (l == '0') {
+							z01.PrintRune('\n')
+						} else {
+							z01.PrintRune(',')
+							z01.PrintRune(' ')
+						}
 					}
 				}
 			}
 		}
 	}
-	z01.PrintRune('\n')
 }
