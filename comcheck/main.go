@@ -17,8 +17,8 @@ func main() {
 	if alert {
 		fmt.Println("Alert!!!")
 	}
-
 }
+
 func compare(s string) bool {
 	if len(s) > 1 {
 
