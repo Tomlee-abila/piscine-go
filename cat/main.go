@@ -23,7 +23,6 @@ func main() {
 }
 
 func openFile(fName string) bool {
-
 	file, err := os.Open(fName)
 	if err != nil {
 		fmt.Println("ERROR:", err.Error())
@@ -35,7 +34,6 @@ func openFile(fName string) bool {
 
 func readFile(filename string) {
 	content, err := ioutil.ReadFile(filename)
-
 	if err != nil {
 		fmt.Println(err.Error())
 		return
