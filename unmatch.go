@@ -3,7 +3,6 @@ package piscine
 func Unmatch(a []int) int {
 	Double := 0
 	count := 0
-	var result int
 	for i, n := range a {
 		Double = 0
 		count = 0
@@ -16,8 +15,8 @@ func Unmatch(a []int) int {
 			}
 		}
 		if count == len(a) && Double%2 == 0 {
-			result = n
+			return n
 		}
 	}
-	return result
+	return -1
 }
