@@ -7,7 +7,7 @@ func DealAPackOfCards(deck []int) {
 	player := 1
 
 	for i := 0; i < 12; i += 3 {
-		fmt.Println("Player", player, ":", arrDeck[i], ",", arrDeck[i+1], ",", arrDeck[i+2])
+		fmt.Printf("Player %v: %v, %v, %v\n", player, arrDeck[i], arrDeck[i+1], arrDeck[i+2])
 		player++
 	}
 }
