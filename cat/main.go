@@ -54,6 +54,7 @@ func readFile(filename string) {
 	// // Print the content of the file as a string
 	// fmt.Print(string(content))
 }
+
 func PrintStr(s string) {
 	for _, i := range s {
 		z01.PrintRune(i)
