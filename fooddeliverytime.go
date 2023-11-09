@@ -48,7 +48,7 @@ func FoodDeliveryTime(order string) int {
 			totalTime += preptime.nuggets
 		}
 	}
-	if (ch * len("chips"))+(br * len("burger"))+(nu * len("nuggets")) != len(runeOrder){
+	if (ch*len("chips"))+(br*len("burger"))+(nu*len("nuggets")) != len(runeOrder) {
 		return 404
 	}
 	return totalTime
