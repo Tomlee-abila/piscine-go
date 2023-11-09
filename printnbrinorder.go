@@ -22,8 +22,8 @@ func PrintNbrInOrder(n int) {
 		for count := range array {
 			arrayCount = count + 1
 		}
-		for i := 0; i < arrayCount-1; i++ {
-			for j := 0; j < arrayCount-i-1; j++ {
+		for i := 0; i < arrayCount; i++ {
+			for j := 0; j < arrayCount-1; j++ {
 				if array[j] > array[j+1] {
 					minValue = array[j]
 					array[j] = array[j+1]
@@ -32,7 +32,7 @@ func PrintNbrInOrder(n int) {
 			}
 		}
 		for i := 0; i < arrayCount; i++ {
-			z01.PrintRune(rune(array[i] + 48))
+			z01.PrintRune(rune(array[i] - 48))
 		}
 	}
 }
