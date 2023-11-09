@@ -9,9 +9,11 @@ func splitWords(s string) []string {
 		if chr >= 'a' && chr <= 'z' || chr >= 'A' && chr <= 'Z' {
 			word += string(chr)
 		}
+
 		if chr == ' ' || i == len(s)-1 {
 			firstWord = false
 		}
+
 		if firstWord == false && word != "" {
 			firstWord = true
 			result = append(result, word)
