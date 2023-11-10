@@ -3,7 +3,7 @@ package piscine
 func LoafOfBread(str string) string {
 	result := ""
 	count := 0
-	if len(str) <= 5 && str != "" {
+	if len(str) < 5 && str != "" {
 		result += "Invalid Output\n"
 		return result
 	}
