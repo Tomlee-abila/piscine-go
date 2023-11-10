@@ -8,18 +8,17 @@ func LoafOfBread(str string) string {
 		return result
 	}
 	for i, ch := range str {
-		if i == (len(str)-1) && ch == ' ' {
-			break
-		}
-		if count == 5 {
-			if i != (len(str) - 1) {
-				result += string(' ')
-				count = 0
-			}
-		} else {
-			if !(ch == ' ') {
-				count++
-				result += string(ch)
+		if ch >= 'a' && ch <= 'z' && ch >= 'A' && ch <= 'Z' {
+			if count == 5 {
+				if i != (len(str) - 1) {
+					result += string(' ')
+					count = 0
+				}
+			} else {
+				if !(ch == ' ') {
+					count++
+					result += string(ch)
+				}
 			}
 		}
 	}
