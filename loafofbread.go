@@ -8,6 +8,9 @@ func LoafOfBread(str string) string {
 		return result
 	}
 	for i, ch := range str {
+		if i == (len(str)-1) && ch == ' ' {
+			break
+		}
 		if count == 5 {
 			if i != (len(str) - 1) {
 				result += string(' ')
