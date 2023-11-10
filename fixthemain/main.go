@@ -21,7 +21,7 @@ func CloseDoor(ptrDoor *Door) bool {
 	return true
 }
 
-func IsDoorOpen(ptrDoor *Door) bool{
+func IsDoorOpen(ptrDoor *Door) bool {
 	PrintStr("is the Door opened ?")
 	return ptrDoor.state == "OPEN"
 }
@@ -31,7 +31,7 @@ func IsDoorClose(ptrDoor *Door) bool {
 	return ptrDoor.state == "CLOSE"
 }
 
-type Door struct{
+type Door struct {
 	state string
 }
 
