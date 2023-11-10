@@ -7,10 +7,12 @@ func LoafOfBread(str string) string {
 		result += "Invalid Output\n"
 		return result
 	}
-	for _, ch := range str {
+	for i, ch := range str {
 		if count == 5 {
-			result += string(' ')
-			count = 0
+			if i != (len(str) - 1) {
+				result += string(' ')
+				count = 0
+			}
 		} else {
 			if !(ch == ' ') {
 				count++
