@@ -7,6 +7,7 @@ func PrintStr(s string) {
 		z01.PrintRune(r)
 	}
 }
+
 func OpenDoor(ptrDoor *Door) bool {
 	PrintStr("Door Closing...")
 	ptrDoor.state = "OPEN"
