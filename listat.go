@@ -6,15 +6,15 @@ package piscine
 // 	"fmt"
 // )
 
-// type NodeL struct {
-// 	Data interface{}
-// 	Next *NodeL
-// }
+type NodeL struct {
+	Data interface{}
+	Next *NodeL
+}
 
-// type List struct {
-// 	Head *NodeL
-// 	Tail *NodeL
-// }
+type List struct {
+	Head *NodeL
+	Tail *NodeL
+}
 
 // func main() {
 // 	link := &List{}
