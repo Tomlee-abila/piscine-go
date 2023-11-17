@@ -1,5 +1,7 @@
 package piscine
 
+// package main
+
 // import (
 // 	"fmt"
 // )
@@ -39,17 +41,21 @@ package piscine
 // }
 
 func ListAt(l *NodeL, pos int) *NodeL {
-	// count := 0
-	// for l.Head != nil {
-	// 	l.Head = l.Head.Next
-	// 	if count == pos {
-	// 		break
-	// 	}
-	// 	count++
-	// }
+	count := 0
+	lNode := l
+	if pos == 0 && lNode != nil {
+		return l
+	}
+	if l == nil {
+		return nil
+	}
 
-	// if l.Head == nil {
-	// 	return nil
-	// }
-	return nil
+	for lNode != nil {
+		if count == pos {
+			return lNode
+		}
+		lNode = lNode.Next
+		count++
+	}
+	return lNode
 }
