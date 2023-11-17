@@ -32,7 +32,7 @@ package piscine
 // 	Next *NodeL
 // }
 
-type List struct {
+type List2 struct {
 	Head *NodeL
 	Tail *NodeL
 	prev *NodeL
@@ -50,7 +50,7 @@ type List struct {
 // 	l.Tail = n
 // }
 
-func ListReverse(l *List) {
+func ListReverse(l *List2) {
 	current := l.Head
 
 	for current != nil {
