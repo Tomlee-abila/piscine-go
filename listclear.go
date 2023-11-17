@@ -54,12 +54,16 @@ package piscine
 // 	l.Tail = n
 // }
 
-func ListClear(l *List) {
-	for l.Head != nil {
-		temp := l.Head.Next
-		l.Head = nil
-		l.Head = temp
-	}
+// func ListClear(l *List) {
+// 	for l.Head != nil {
+// 		temp := l.Head.Next
+// 		l.Head = nil
+// 		l.Head = temp
+// 	}
 
-	l.Tail = nil
+// 	l.Tail = nil
+// }
+
+func ListClear(l *List) {
+	l.Head = nil
 }
