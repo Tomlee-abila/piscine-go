@@ -60,7 +60,7 @@ package piscine
 // }
 
 func ListReverse(l *List) {
-	link := &piscine.List{}
+	link := &List{}
 
 	for l.Head != nil {
 		ListPushFront(link, l.Head.Data)
@@ -86,4 +86,5 @@ func ListReverse(l *List) {
 	// 	// next.Next = prev
 	// }
 	// l.Head = prev
+
 }
