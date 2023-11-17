@@ -32,33 +32,33 @@ package piscine
 // 	Next *NodeL
 // }
 
-type List2 struct {
-	Head *NodeL
-	Tail *NodeL
-	prev *NodeL
-	next *NodeL
-}
+// type List struct {
+// 	Head *NodeL
+// 	Tail *NodeL
+// }
 
 // func ListPushBack(l *List, data interface{}) {
 // 	n := &NodeL{Data: data}
 
-// 	if l.Head == nil {
-// 		l.Head = n
+// 	if Head == nil {
+// 		Head = n
 // 	} else {
-// 		l.Tail.Next = n
+// 		TaiNext = n
 // 	}
-// 	l.Tail = n
+// 	Tail = n
 // }
 
-func ListReverse(l *List2) {
+func ListReverse(l *List) {
 	current := l.Head
+	var next *NodeL
+	var prev *NodeL
 
 	for current != nil {
-		l.next = current.Next
-		current.Next = l.prev
-		l.prev = current
-		l.next.Next = l.prev
-		current = l.next
+		next = current.Next
+		current.Next = prev
+		prev = current
+		next.Next = prev
+		current = next
 	}
-	l.Head = l.prev
+	l.Head = prev
 }
