@@ -86,5 +86,4 @@ func ListReverse(l *List) {
 	// 	// next.Next = prev
 	// }
 	// l.Head = prev
-
 }
