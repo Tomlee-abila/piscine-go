@@ -1,24 +1,24 @@
-package piscine
+// package piscine
 
-// package main
+package main
 
-// import (
-// 	"fmt"
-// )
+import (
+	"fmt"
+)
 
-// func main() {
+func main() {
 
-// 	link := &List{}
+	link := &List{}
 
-// 	ListPushBack(link, "Hello")
-// 	ListPushBack(link, "man")
-// 	ListPushBack(link, "how are you")
+	ListPushBack(link, "Hello")
+	ListPushBack(link, "man")
+	ListPushBack(link, "how are you")
 
-// 	for link.Head != nil {
-// 		fmt.Println(link.Head.Data)
-// 		link.Head = link.Head.Next
-// 	}
-// }
+	for link.Head != nil {
+		fmt.Println(link.Head.Data)
+		link.Head = link.Head.Next
+	}
+}
 
 type NodeL struct {
 	Data interface{}

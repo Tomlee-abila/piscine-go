@@ -40,25 +40,50 @@ package piscine
 // func ListPushBack(l *List, data interface{}) {
 // 	n := &NodeL{Data: data}
 
-// 	if Head == nil {
-// 		Head = n
+// 	if l.Head == nil {
+// 		l.Head = n
 // 	} else {
-// 		TaiNext = n
+// 		l.Tail.Next = n
 // 	}
-// 	Tail = n
+// 	l.Tail = n
+// }
+
+// func ListPushFront(l *List, data interface{}) {
+// 	newerNode := &NodeL{Data: data}
+
+// 	if l.Head == nil {
+// 		l.Head = newerNode
+// 	} else {
+// 		newerNode.Next = l.Head
+// 		l.Head = newerNode
+// 	}
 // }
 
 func ListReverse(l *List) {
-	current := l.Head
-	var next *NodeL
-	var prev *NodeL
+	link := &piscine.List{}
 
-	for current != nil {
-		next = current.Next
-		current.Next = prev
-		prev = current
-		next.Next = prev
-		current = next
+	for l.Head != nil {
+		ListPushFront(link, l.Head.Data)
+		l.Head = l.Head.Next
 	}
-	l.Head = prev
+	if l.Head == nil {
+		l.Tail = nil
+	}
+
+	for link.Head != nil {
+		ListPushBack(l, link.Head.Data)
+		link.Head = link.Head.Next
+	}
+	// current := l.Head
+	// var next *NodeL
+	// var prev *NodeL = &NodeL{}
+
+	// for current != nil {
+	// 	next = current.Next
+	// 	current.Next = prev
+	// 	prev = current
+	// 	current = next
+	// 	// next.Next = prev
+	// }
+	// l.Head = prev
 }
