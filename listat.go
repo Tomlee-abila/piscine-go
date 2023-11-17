@@ -1,31 +1,31 @@
-package main
+package piscine
 
-import (
-	"fmt"
-)
+// import (
+// 	"fmt"
+// )
 
-type NodeL struct {
-	Data interface{}
-	Next *NodeL
-}
+// type NodeL struct {
+// 	Data interface{}
+// 	Next *NodeL
+// }
 
-type List struct {
-	Head *NodeL
-	Tail *NodeL
-}
+// type List struct {
+// 	Head *NodeL
+// 	Tail *NodeL
+// }
 
-func main() {
-	link := &List{}
+// func main() {
+// 	link := &List{}
 
-	ListPushBack(link, "hello")
-	ListPushBack(link, "how are")
-	ListPushBack(link, "you")
-	ListPushBack(link, 1)
+// 	ListPushBack(link, "hello")
+// 	ListPushBack(link, "how are")
+// 	ListPushBack(link, "you")
+// 	ListPushBack(link, 1)
 
-	fmt.Println(ListAt(link.Head, 3).Data)
-	fmt.Println(ListAt(link.Head, 1).Data)
-	fmt.Println(ListAt(link.Head, 7))
-}
+// 	fmt.Println(ListAt(link.Head, 3).Data)
+// 	fmt.Println(ListAt(link.Head, 1).Data)
+// 	fmt.Println(ListAt(link.Head, 7))
+// }
 
 func ListPushBack(l *List, data interface{}) {
 	n := &NodeL{Data: data}
@@ -39,17 +39,17 @@ func ListPushBack(l *List, data interface{}) {
 }
 
 func ListAt(l *NodeL, pos int) *NodeL {
-	count := 0
-	for l.Head != nil {
-		l.Head = l.Head.Next
-		if count == pos {
-			break
-		}
-		count++
-	}
+	// count := 0
+	// for l.Head != nil {
+	// 	l.Head = l.Head.Next
+	// 	if count == pos {
+	// 		break
+	// 	}
+	// 	count++
+	// }
 
-	if l.Head == nil {
-		return nil
-	}
-	return l.Head
+	// if l.Head == nil {
+	// 	return nil
+	// }
+	return nil
 }
