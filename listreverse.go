@@ -32,13 +32,12 @@ package piscine
 // 	Next *NodeL
 // }
 
-// type List struct {
-// 	Head *NodeL
-// 	Tail *NodeL
-// 	prev *NodeL
-// 	next *NodeL
-
-// }
+type List struct {
+	Head *NodeL
+	Tail *NodeL
+	prev *NodeL
+	next *NodeL
+}
 
 // func ListPushBack(l *List, data interface{}) {
 // 	n := &NodeL{Data: data}
