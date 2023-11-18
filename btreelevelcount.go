@@ -47,7 +47,7 @@ func BTreeLevelCount(root *TreeNode) int {
 	r2 := root
 	count1 := 0
 	count2 := 0
-	result := 0
+	result := 1
 
 	for r1 != nil {
 		count1++
@@ -60,12 +60,12 @@ func BTreeLevelCount(root *TreeNode) int {
 	}
 
 	if count1 > count2 {
-		result = count1
+		result = count1 + 1
 	} else if count1 < count2 {
-		result = count2
+		result = count2 + 1
 	} else if count1 == count2 {
-		result = count2
+		result = count2 + 1
 	}
 
-	return result + 1
+	return result
 }
