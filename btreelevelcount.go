@@ -43,29 +43,13 @@ func BTreeLevelCount(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
-	r1 := root
-	r2 := root
-	count1 := 0
-	count2 := 0
-	result := 1
 
-	for r1 != nil {
-		count1++
-		r1 = r1.Right
+	rcount := BTreeLevelCount(root.Right)
+	lcont := BTreeLevelCount(root.Left)
+
+	if rcount > lcont {
+		return rcount + 1
+	} else {
+		return lcont + 1
 	}
-
-	for r2 != nil {
-		count2++
-		r2 = r2.Right
-	}
-
-	if count1 > count2 {
-		result = count1 + 1
-	} else if count1 < count2 {
-		result = count2 + 1
-	} else if count1 == count2 {
-		result = count2 + 1
-	}
-
-	return result
 }
