@@ -65,5 +65,5 @@ func BTreeLevelCount(root *TreeNode) int {
 		result = count2
 	}
 
-	return result + 1
+	return result
 }
