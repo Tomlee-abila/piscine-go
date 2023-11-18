@@ -1,1 +1,0 @@
-ls -p -A -m -t | sed 's/ //g' 
