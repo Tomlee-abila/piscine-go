@@ -72,7 +72,6 @@ package piscine
 func BTreeTransplant(root, node, rplc *TreeNode) *TreeNode {
 	if root.Data == node.Data {
 		root.Data = rplc.Data
-		return root
 	}
 
 	if root.Data > node.Data {
